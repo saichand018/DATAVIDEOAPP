@@ -7,6 +7,23 @@
     <title>play</title>
 </head>
 <body>
-    <p>{{videos}}</p>
+     <h1>Here is a list of all available videos.</h1>
+  <ul>
+    {# <video width="320" height="240" controls> #}
+ {# <source src={{pup}} type="video/mp4"> #}
+   
+    {% for pup in videos %}
+    <li>{{pup}}</li>
+   <video width="320" height="240" controls> 
+
+ <source src="static/{{pup}}" type="video/mp4">
+      </video>
+    
+    {% endfor %}
+
+  </ul>
+
+
+</div>
 </body>
 </html>
